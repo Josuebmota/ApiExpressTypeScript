@@ -34,7 +34,7 @@ export default class CreateUsers1615842027395 implements MigrationInterface {
               isNullable: false
             },
             {
-              name:'img_profile',
+              name:'avatar',
               type: 'varchar',
             },
             {

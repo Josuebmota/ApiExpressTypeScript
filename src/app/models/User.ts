@@ -29,8 +29,8 @@ class User {
   @Column({length:255})
   password: string;
 
-  @Column({length:255, name:"img_profile"})
-  imgProfile: string;
+  @Column({length:500})
+  avatar: string;
 
   @Column()
   status: string;

@@ -21,12 +21,26 @@
     "@typescript-eslint"  ],
   "rules": {
     "prettier/prettier":"error",
+    "@typescript-eslint/no-unused-vars": ["error", {
+      "argsIgnorePattern": "_"
+    }],
     "class-methods-use-this":"off",
     "import/extensions": [
       "error",
       "ignorePackages",
       {
         "ts": "never"
+      }
+    ],
+    "@typescript-eslint/naming-convention": [
+      "error",
+      {
+        "selector": "interface",
+        "format": ["PascalCase"],
+        "custom": {
+          "regex": "^I[A-Z]",
+          "match": true
+        }
       }
     ]
   },
