@@ -5,10 +5,13 @@
   "username":"postgres",
   "password":"docker",
   "database":"onilearning",
+  "entities":[
+    ".src/modules/**/infra/typeorm/entities/*.ts"
+  ],
   "migrations":[
-    "./src/database/migration/*.ts"
+    "./src/shared/infra/typeorm/migration/*.ts"
   ],
   "cli": {
-    "migrationsDir": "./src/database/migration"
+    "migrationsDir": "./src/shared/infra/typeorm/migration"
   }
 }
