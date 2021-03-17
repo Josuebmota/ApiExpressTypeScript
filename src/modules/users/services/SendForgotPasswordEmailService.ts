@@ -1,5 +1,5 @@
 import { injectable, inject } from 'tsyringe';
-
+import path from 'path';
 import AppError from '@shared/errors/AppError';
 
 import IMailProvider from '@shared/container/providers/MailProvider/model/IMailProvider';
@@ -27,12 +27,28 @@ class SendForgotPasswordEmailService {
       throw new AppError('Usuario não encontrado', 404);
     }
 
-    // const { token } = await this.userTokenRepository.generate(user.id);
-
-    this.mailProvider.sendMail(
-      email,
-      'Pedido de recuperação de senha recebido',
+    const { token } = await this.userTokenRepository.generate(user.id);
+    const forgotPassworTemplate = path.resolve(
+      __dirname,
+      '..',
+      'views',
+      'forgot_password.hbs',
     );
+
+    await this.mailProvider.sendMail({
+      to: {
+        name: user.firstName + user.lastName,
+        email: user.email,
+      },
+      subject: '[Onilearning] Recuperação de senha',
+      templateData: {
+        file: forgotPassworTemplate,
+        variables: {
+          name: user.firstName + user.lastName,
+          link: `${process.env.APP_WEB_URL}/reset-password?token=${token}`,
+        },
+      },
+    });
   }
 }
 
