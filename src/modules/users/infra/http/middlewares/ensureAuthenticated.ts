@@ -5,13 +5,17 @@ import authConfig from '@config/auth';
 
 import AppError from '@shared/errors/AppError';
 
-import ITokenPayload from './interface/ITokenPayload';
+interface ITokenPayload {
+  iat: number;
+  exp: number;
+  sub: string;
+}
 
 export default function ensureAuthenticated(
   request: Request,
   reponse: Response,
   next: NextFunction,
-) {
+): void {
   const authHeader = request.headers.authorization;
 
   if (!authHeader) {

@@ -27,6 +27,9 @@ class User {
   birthDate: Date;
 
   @Column({ length: 255 })
+  cpf: string;
+
+  @Column({ length: 255 })
   email: string;
 
   @Exclude()
