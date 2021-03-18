@@ -1,9 +1,9 @@
 _id: req_fdbcbbaa612e4b8b9f41e19d57ff6b29
 type: Request
 parentId: fld_2c68054daf1b49d2a1db1972c0911b7a
-modified: 1616028304828
+modified: 1616099081515
 created: 1616028120399
-url: "{{ _.base_url }}/onicadastroapi/v1/file"
+url: "{{ _.base_url }}/onicadastroapi/v1/file/0eeb818342134b677b6d"
 name: File
 description: ""
 method: GET

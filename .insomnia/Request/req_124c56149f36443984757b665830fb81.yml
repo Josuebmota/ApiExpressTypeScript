@@ -1,9 +1,9 @@
 _id: req_124c56149f36443984757b665830fb81
 type: Request
 parentId: fld_3ab74fe4f4134ea7a53f70faacb815c6
-modified: 1616027430868
+modified: 1616103088626
 created: 1616027385160
-url: "{{ _.base_url }}/onicadastroapi/v1/session/resset"
+url: "{{ _.base_url }}/onicadastroapi/v1/password/resset"
 name: Reset
 description: ""
 method: POST
@@ -11,9 +11,9 @@ body:
   mimeType: application/json
   text: |-
     {
-    	"email":	"Joanderson@gmail.com",
-    	"password": "lenda97",
-    	"passwordConfirmation":"lenda97"
+    	"token":"a883fad8-5521-413b-a6df-312e2c7e9ab7",
+    	"password": "len97",
+    	"passwordConfirmation":"lens97"
     }
 parameters: []
 headers:

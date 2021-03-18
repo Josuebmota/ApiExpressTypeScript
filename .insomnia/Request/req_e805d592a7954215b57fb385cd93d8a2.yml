@@ -1,7 +1,7 @@
 _id: req_e805d592a7954215b57fb385cd93d8a2
 type: Request
 parentId: fld_2c68054daf1b49d2a1db1972c0911b7a
-modified: 1616028123495
+modified: 1616098571320
 created: 1616026748659
 url: "{{ _.base_url }}/onicadastroapi/v1/users/avatar"
 name: Avatar
@@ -10,12 +10,16 @@ method: PATCH
 body:
   mimeType: multipart/form-data
   params:
-    - name: avatar
+    - name: avatarFilename
       value: ""
       description: ""
       id: pair_0a2573fcc0ae410eada69c163e1f292b
       type: file
-      multiline: null
+      fileName: C:\Users\Josue\Pictures\8a909882b3c6a2fcba6e1d4a42dabd42.jpg
+    - name: user_id
+      value: 8f83af8f-fe1e-421d-a3dd-a56e8639a672
+      description: ""
+      id: pair_7768af5c897648888a1f55670f82114a
 parameters: []
 headers:
   - name: Content-Type
@@ -23,6 +27,7 @@ headers:
     id: pair_0fb851fceac744588597d238b45ca73c
 authentication:
   type: bearer
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MTYwOTg0NzUsImV4cCI6MTYxNjE4NDg3NSwic3ViIjoiOGY4M2FmOGYtZmUxZS00MjFkLWEzZGQtYTU2ZTg2MzlhNjcyIn0.bAydGrYhOVOz808wu3D4FMtj64_DyfSdtfdrm2IqENw
 metaSortKey: -1616028120424
 isPrivate: false
 settingStoreCookies: true

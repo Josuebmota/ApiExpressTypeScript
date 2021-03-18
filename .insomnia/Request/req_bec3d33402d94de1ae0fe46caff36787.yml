@@ -1,0 +1,39 @@
+_id: req_bec3d33402d94de1ae0fe46caff36787
+type: Request
+parentId: fld_80daf26089724f83996d3bfb91299135
+modified: 1616102011019
+created: 1616099405045
+url: "{{ _.base_url }}/onicadastroapi/v1/profile"
+name: Update
+description: ""
+method: PUT
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"socialName":"Jojo",
+    	"firstName": "Joanderson",
+    	"lastName": "Legend",
+    	"birthDate":"2000-05-01",
+    	"cpf":"072.547.658-98",
+    	"email": "joanderson@gmail.com",
+    	"password":"lenda97",
+    	"passwordConfirmation":"lenda97",
+    	"oldPassword":"lenda97"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_8ada0c3b3d7542e8869f19f44d017af2
+authentication:
+  type: bearer
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MTYwOTg5MjYsImV4cCI6MTYxNjE4NTMyNiwic3ViIjoiOGY4M2FmOGYtZmUxZS00MjFkLWEzZGQtYTU2ZTg2MzlhNjcyIn0.RKL6RG0EWC1_5Yw619S8VMFFkOGArx7ZmBFB1NJiKNA
+metaSortKey: -1616027466078
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,36 @@
+_id: req_d5b12d35d51644579e7b67fedca721f2
+type: Request
+parentId: fld_2c68054daf1b49d2a1db1972c0911b7a
+modified: 1616098223108
+created: 1616096371650
+url: "{{ _.base_url }}/onicadastroapi/v1/users"
+name: Create
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"socialName":"Jojo",
+    	"firstName": "Joanderson",
+    	"lastName": "Legend",
+    	"birthDate":"2000-05-01",
+    	"cpf":"072.547.658-98",
+    	"email": "joanderson@gmail.com",
+    	"password":"lenda97",
+    	"passwordConfirmation":"lenda97"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_8ada0c3b3d7542e8869f19f44d017af2
+authentication: {}
+metaSortKey: -1616028120442.75
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

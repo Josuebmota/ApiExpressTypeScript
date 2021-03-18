@@ -1,9 +1,9 @@
 _id: req_9a92284f92094b2e80e5f6a9dc530afb
 type: Request
 parentId: fld_3ab74fe4f4134ea7a53f70faacb815c6
-modified: 1616027501157
+modified: 1616102271477
 created: 1616027359907
-url: "{{ _.base_url }}/onicadastroapi/v1/session/forgot"
+url: "{{ _.base_url }}/onicadastroapi/v1/password/forgot"
 name: Forgot
 description: ""
 method: POST
@@ -11,7 +11,7 @@ body:
   mimeType: application/json
   text: |-
     {
-    	"email":	"Joanderson@gmail.com"
+    	"email":	"joanderson@gmail.com"
     }
 parameters: []
 headers:

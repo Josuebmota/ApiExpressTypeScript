@@ -1,7 +1,7 @@
 _id: req_d8b4fbc846174bcca7b225e3c28a5fc4
 type: Request
 parentId: fld_3ab74fe4f4134ea7a53f70faacb815c6
-modified: 1616027344545
+modified: 1616103366274
 created: 1616026782987
 url: "{{ _.base_url }}/onicadastroapi/v1/session/login"
 name: Login
@@ -11,7 +11,7 @@ body:
   mimeType: application/json
   text: |-
     {
-    	"email":	"Joanderson@gmail.com",
+    	"email":	"joanderson@gmail.com",
     	"password": "lenda97"
     }
 parameters: []

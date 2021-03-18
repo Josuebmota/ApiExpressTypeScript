@@ -1,7 +1,7 @@
 _id: req_b15d3c1ca397459d82da9976b6e3138b
 type: Request
 parentId: fld_80daf26089724f83996d3bfb91299135
-modified: 1616027487025
+modified: 1616099435076
 created: 1616027465978
 url: "{{ _.base_url }}/onicadastroapi/v1/profile"
 name: Show
@@ -12,6 +12,7 @@ parameters: []
 headers: []
 authentication:
   type: bearer
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MTYwOTg5MjYsImV4cCI6MTYxNjE4NTMyNiwic3ViIjoiOGY4M2FmOGYtZmUxZS00MjFkLWEzZGQtYTU2ZTg2MzlhNjcyIn0.RKL6RG0EWC1_5Yw619S8VMFFkOGArx7ZmBFB1NJiKNA
 metaSortKey: -1616027465978
 isPrivate: false
 settingStoreCookies: true
