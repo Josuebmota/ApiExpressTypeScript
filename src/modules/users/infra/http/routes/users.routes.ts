@@ -33,7 +33,7 @@ usersRouter.post(
         .required()
         .error(new Error('Email é Obrigatório')),
       password: Joi.string().required().error(new Error('Senha é obrigatório')),
-      password_confirmation: Joi.string()
+      passwordConfirmation: Joi.string()
         .required()
         .valid(Joi.ref('password'))
         .error(new Error('Confirmação de password é obrigatório')),

@@ -12,8 +12,8 @@ import '@shared/container';
 const app = express();
 
 app.use(express.json());
-app.use('/file', express.static(uploadConfig.uploadsFolder));
-app.use(routes);
+app.use('/onicadastroapi/v1/file', express.static(uploadConfig.uploadsFolder));
+app.use('/onicadastroapi/v1/', routes);
 
 app.use((err: Error, request: Request, response: Response, _: NextFunction) => {
   if (err instanceof AppError) {

@@ -24,7 +24,7 @@ sessionsRouter.post(
         .required()
         .error(new Error('Token é obrigatório')),
       password: Joi.string().required().error(new Error('Senha é obrigatório')),
-      password_confirmation: Joi.string()
+      passwordConfirmation: Joi.string()
         .required()
         .valid(Joi.ref('password'))
         .error(new Error('Confirmação de senha é obrigatório')),
