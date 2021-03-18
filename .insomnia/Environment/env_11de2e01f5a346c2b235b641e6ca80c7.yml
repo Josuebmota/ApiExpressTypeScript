@@ -1,0 +1,14 @@
+_id: env_11de2e01f5a346c2b235b641e6ca80c7
+type: Environment
+parentId: env_79ef2220d837f9c98c80198ab205e16d8036a9e6
+modified: 1616027171037
+created: 1616027136130
+name: Development
+data:
+  base_url: http://127.0.0.1:3333
+dataPropertyOrder:
+  "&":
+    - base_url
+color: "#7d69cb"
+isPrivate: false
+metaSortKey: 1616027136130

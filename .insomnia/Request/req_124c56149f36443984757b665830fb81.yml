@@ -1,0 +1,31 @@
+_id: req_124c56149f36443984757b665830fb81
+type: Request
+parentId: fld_3ab74fe4f4134ea7a53f70faacb815c6
+modified: 1616027430868
+created: 1616027385160
+url: "{{ _.base_url }}/onicadastroapi/v1/session/resset"
+name: Reset
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"email":	"Joanderson@gmail.com",
+    	"password": "lenda97",
+    	"passwordConfirmation":"lenda97"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_b3eb66e0adc8432fbf5a60b90e7982eb
+authentication: {}
+metaSortKey: -1616026774417.5
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

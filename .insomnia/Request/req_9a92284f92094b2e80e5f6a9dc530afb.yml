@@ -1,0 +1,29 @@
+_id: req_9a92284f92094b2e80e5f6a9dc530afb
+type: Request
+parentId: fld_3ab74fe4f4134ea7a53f70faacb815c6
+modified: 1616027501157
+created: 1616027359907
+url: "{{ _.base_url }}/onicadastroapi/v1/session/forgot"
+name: Forgot
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"email":	"Joanderson@gmail.com"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_b3eb66e0adc8432fbf5a60b90e7982eb
+authentication: {}
+metaSortKey: -1616026765848
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

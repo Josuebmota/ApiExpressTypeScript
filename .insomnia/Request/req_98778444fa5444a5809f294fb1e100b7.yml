@@ -1,0 +1,59 @@
+_id: req_98778444fa5444a5809f294fb1e100b7
+type: Request
+parentId: fld_80daf26089724f83996d3bfb91299135
+modified: 1616028349342
+created: 1616028332390
+url: "{{ _.base_url }}/onicadastroapi/v1/profile"
+name: Update
+description: ""
+method: PUT
+body:
+  mimeType: multipart/form-data
+  params:
+    - name: socialName
+      value: Jojo
+      description: ""
+      id: pair_31c1f05e27044ed7a988f5358fcf6fd0
+    - name: firstName
+      value: Joanderson
+      description: ""
+      id: pair_c356d029a4cc4d69816ce953335e3d8a
+    - name: lastName
+      value: Lendario
+      description: ""
+      id: pair_07345b5ef76b452abb10d4341214e545
+    - name: birthDate
+      value: 2000-05-01
+      description: ""
+      id: pair_00114b3c8d0f46d9a635f2d06124f9fb
+    - name: cpf
+      value: 072.547.658-98
+      description: ""
+      id: pair_23fea47b74d545d3aba48e019b2dbd54
+    - name: email
+      value: joanderson@gmail.com
+      description: ""
+      id: pair_f2239c5691c74d83bd71cc8020240c19
+    - name: password
+      value: lenda97
+      description: ""
+      id: pair_e91d971a82c2433e90bcd6ea713c440c
+    - name: passwordConfirmation
+      value: lenda97
+      description: ""
+      id: pair_3b0fb8a64b04447691fe13839ac11d64
+parameters: []
+headers:
+  - name: Content-Type
+    value: multipart/form-data
+    id: pair_8ada0c3b3d7542e8869f19f44d017af2
+authentication:
+  type: bearer
+metaSortKey: -1616027466028
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
