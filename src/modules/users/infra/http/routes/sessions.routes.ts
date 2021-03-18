@@ -9,11 +9,8 @@ sessionsRouter.post(
   '/login',
   celebrate({
     [Segments.BODY]: {
-      email: Joi.string()
-        .email()
-        .required()
-        .error(new Error('Email é obrigatório')),
-      password: Joi.string().required().error(new Error('Senha é obrigatório')),
+      email: Joi.string().email().required(),
+      password: Joi.string().required(),
     },
   }),
   SessionController.create,

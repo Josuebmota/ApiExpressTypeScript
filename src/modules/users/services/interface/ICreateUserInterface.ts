@@ -3,6 +3,7 @@ export default interface IRequest {
   firstName: string;
   lastName: string;
   birthDate: Date;
+  cpf: string;
   email: string;
   password: string;
   status?: string;

@@ -11,6 +11,6 @@ const storageProviders = {
 };
 
 container.registerInstance<IStorageProvider>(
-  'MailProvider',
+  'StorageProvider',
   storageProviders[uploadConfig.driver],
 );

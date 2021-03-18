@@ -11,16 +11,16 @@ profileRoutes.put(
   '/',
   celebrate({
     [Segments.BODY]: {
-      email: Joi.string()
-        .email()
-        .required()
-        .error(new Error('Email é Obrigatório')),
-      cpf: Joi.string()
-        .regex(/^\d{3}\.\d{3}\.\d{3}-\d{2}$/)
-        .error(new Error('Cpf inválido, xxx.xxx.xxx-xx')),
+      socialName: Joi.string(),
+      firstName: Joi.string(),
+      lastName: Joi.string(),
+      birthDate: Joi.date(),
+      cpf: Joi.string().regex(/^\d{3}\.\d{3}\.\d{3}-\d{2}$/),
+      status: Joi.string(),
+      email: Joi.string().email().required(),
       password: Joi.string(),
-      password_confirmation: Joi.string().valid(Joi.ref('password')),
-      old_password: Joi.string(),
+      passwordConfirmation: Joi.string().valid(Joi.ref('password')),
+      oldPassword: Joi.string(),
     },
   }),
   ensureAuthenticated,

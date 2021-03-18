@@ -7,7 +7,7 @@
   "password":"docker",
   "database":"onilearning",
   "entities":[
-    ".src/modules/**/infra/typeorm/entities/*.ts"
+    "./src/modules/**/infra/typeorm/entities/*.ts"
   ],
   "migrations":[
     "./src/shared/infra/typeorm/migration/*.ts"

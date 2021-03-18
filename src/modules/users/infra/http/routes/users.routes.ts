@@ -14,29 +14,17 @@ usersRouter.post(
   '/',
   celebrate({
     [Segments.BODY]: {
-      firstName: Joi.string()
-        .required()
-        .error(new Error('Primeiro nome é obrigatório')),
-      lastName: Joi.string()
-        .required()
-        .error(new Error('Último nome é Obrigatório')),
-      birthDate: Joi.date()
-        .required()
-        .error(new Error('Data de nascimento é obrigatório')),
+      socialName: Joi.string(),
+      firstName: Joi.string().required(),
+      lastName: Joi.string().required(),
+      birthDate: Joi.date().required(),
       cpf: Joi.string()
         .regex(/^\d{3}\.\d{3}\.\d{3}-\d{2}$/)
-        .error(new Error('Cpf inválido, xxx.xxx.xxx-xx'))
-        .required()
-        .error(new Error('Cpf é obrigatório')),
-      email: Joi.string()
-        .email()
-        .required()
-        .error(new Error('Email é Obrigatório')),
-      password: Joi.string().required().error(new Error('Senha é obrigatório')),
-      passwordConfirmation: Joi.string()
-        .required()
-        .valid(Joi.ref('password'))
-        .error(new Error('Confirmação de password é obrigatório')),
+        .required(),
+      status: Joi.string(),
+      email: Joi.string().email().required(),
+      password: Joi.string().required(),
+      passwordConfirmation: Joi.string().required().valid(Joi.ref('password')),
     },
   }),
   UsersController.create,
@@ -44,7 +32,7 @@ usersRouter.post(
 usersRouter.patch(
   '/avatar',
   ensureAuthenticated,
-  upload.single('avatar'),
+  upload.single('avatarFilename'),
   UserAvatarController.update,
 );
 

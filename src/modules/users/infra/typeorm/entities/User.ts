@@ -51,7 +51,6 @@ class User {
   @Expose({ name: 'avatarUrl' })
   getAvatarUrl(): string | null {
     if (!this.avatar) return null;
-
     switch (upload.driver) {
       case 'disk':
         return this.avatar

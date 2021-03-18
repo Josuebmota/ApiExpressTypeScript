@@ -3,6 +3,7 @@ export default interface ICreateUserDTO {
   firstName: string;
   lastName: string;
   birthDate: Date;
+  cpf: string;
   email: string;
   password: string;
   status?: string;

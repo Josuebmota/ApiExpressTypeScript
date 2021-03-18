@@ -36,15 +36,15 @@ class UpdateUserService {
       throw new AppError('Email já existente');
     }
 
-    user.socialName = socialName;
-    user.firstName = firstName;
-    user.lastName = lastName;
-    user.birthDate = birthDate;
+    user.socialName = socialName || user.socialName;
+    user.firstName = firstName || user.firstName;
+    user.lastName = lastName || user.lastName;
+    user.birthDate = birthDate || user.birthDate;
     user.email = email;
-    user.status = status;
+    user.status = status || user.status;
 
     if (password) {
-      if (!oldPassword) throw new AppError('Old password is required');
+      if (!oldPassword) throw new AppError('Senha antiga é necessaria');
 
       const isEqualPassword = await compare(oldPassword, user.password);
 

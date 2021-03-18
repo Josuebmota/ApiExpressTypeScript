@@ -14,7 +14,7 @@ class ResetPasswordService {
     @inject('UsersRepository')
     private usersRepository: IUsersRepository,
 
-    @inject('UsersRepository')
+    @inject('UserTokenRepository')
     private userTokenRepository: IUserTokenRepository,
 
     @inject('HashProvider')
@@ -24,7 +24,7 @@ class ResetPasswordService {
   public async execute({
     token,
     password,
-    password_confirmation,
+    passwordConfirmation,
   }: IRequest): Promise<void> {
     const userToken = await this.userTokenRepository.findByToken(token);
 
@@ -44,7 +44,7 @@ class ResetPasswordService {
       throw new AppError('Token expirado.');
     }
 
-    if (password !== password_confirmation) {
+    if (password !== passwordConfirmation) {
       throw new AppError('Senhas devem ser iguais.');
     }
 

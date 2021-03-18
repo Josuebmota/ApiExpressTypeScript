@@ -19,15 +19,9 @@ sessionsRouter.post(
   '/resset',
   celebrate({
     [Segments.BODY]: {
-      token: Joi.string()
-        .uuid()
-        .required()
-        .error(new Error('Token é obrigatório')),
-      password: Joi.string().required().error(new Error('Senha é obrigatório')),
-      passwordConfirmation: Joi.string()
-        .required()
-        .valid(Joi.ref('password'))
-        .error(new Error('Confirmação de senha é obrigatório')),
+      token: Joi.string().uuid().required(),
+      password: Joi.string().required(),
+      passwordConfirmation: Joi.string().required().valid(Joi.ref('password')),
     },
   }),
   ResetPasswordController.create,

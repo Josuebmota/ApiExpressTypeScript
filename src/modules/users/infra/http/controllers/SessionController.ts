@@ -1,5 +1,6 @@
 import { container } from 'tsyringe';
 import { Request, Response } from 'express';
+import { classToClass } from 'class-transformer';
 
 import AuthenticateUserService from '@modules/users/services/AuthenticateUserService';
 
@@ -10,7 +11,7 @@ class SessionController {
 
     const { user, token } = await authenticateUser.execute({ email, password });
 
-    return response.status(201).json({ user, token });
+    return response.status(201).json({ user: classToClass(user), token });
   }
 }
 

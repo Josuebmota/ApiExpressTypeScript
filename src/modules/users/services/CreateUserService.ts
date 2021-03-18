@@ -22,14 +22,20 @@ class CreateUserService {
     firstName,
     lastName,
     birthDate,
+    cpf,
     email,
     password,
     status,
   }: IRequest): Promise<User> {
-    const checkUserExists = await this.usersRepository.findByEmail(email);
+    const userEmailExists = await this.usersRepository.findByEmail(email);
 
-    if (checkUserExists) {
+    if (userEmailExists) {
       throw new AppError('Email já existente');
+    }
+    const userCpfExists = await this.usersRepository.findByCpf(cpf);
+
+    if (userCpfExists) {
+      throw new AppError('Cpf já existente');
     }
 
     const hashedPassword = await this.hasProvider.generateHash(password);
@@ -39,6 +45,7 @@ class CreateUserService {
       firstName,
       lastName,
       birthDate,
+      cpf,
       email,
       password: hashedPassword,
       status,

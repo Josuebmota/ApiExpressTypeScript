@@ -23,10 +23,10 @@ class AuthenticateUserService {
     const user = await this.usersRepository.findByEmail(email);
 
     if (!user) {
-      throw new AppError('Combinação incorreta email e senha', 401);
+      throw new AppError('Usuário não encontrado', 404);
     }
 
-    const passwordMatched = this.hasProvider.compareHash(
+    const passwordMatched = await this.hasProvider.compareHash(
       password,
       user.password,
     );
