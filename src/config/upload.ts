@@ -38,7 +38,7 @@ export default {
   config: {
     disk: {},
     s3: {
-      bucket: 'app-gobarber-2',
+      bucket: 'app-onilearning',
     },
   },
 } as IUploadConfig;

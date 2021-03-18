@@ -48,14 +48,14 @@ class User {
   @UpdateDateColumn({ name: 'updated_at' })
   updatedAt: Date;
 
-  @Expose({ name: 'avatar_url' })
+  @Expose({ name: 'avatarUrl' })
   getAvatarUrl(): string | null {
     if (!this.avatar) return null;
 
     switch (upload.driver) {
       case 'disk':
         return this.avatar
-          ? `${process.env.APP_API_URL}/files/${this.avatar}`
+          ? `${process.env.APP_API_URL}/onicadastroapi/v1/file/${this.avatar}`
           : null;
       case 's3':
         return `https://${upload.config.s3.bucket}.s3.amazonaws.com/${this.avatar}`;
